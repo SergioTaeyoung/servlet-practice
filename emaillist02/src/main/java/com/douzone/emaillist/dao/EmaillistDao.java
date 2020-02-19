@@ -34,7 +34,7 @@ public class EmaillistDao {
 
 		try {
 			con = getConnection();
-			String sql = "insert into emaillist values(null,?,?,?)";
+			String sql = "insert into email_list values(null,?,?,?)";
 			pstmt = con.prepareStatement(sql);
 
 			pstmt.setString(1, emailListVO.getFirstName());
@@ -72,7 +72,7 @@ public class EmaillistDao {
 		try {
 			con = getConnection();
 
-			String sql = "select first_name,last_name,email from emaillist order by no desc";
+			String sql = "select first_name,last_name,email from email_list order by no desc";
 			pstmt = con.prepareStatement(sql);
 
 			rs = pstmt.executeQuery();
